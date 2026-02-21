@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Benim Sitem</title>
+    <title>Mini WeTransfer</title>
 </head>
 <body>
-    <h1>Site Yayında 🚀</h1>
-    <p>Bu site artık herkese açık.</p>
+    <h1>Dosya Gönder 🚀</h1>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Yükle ve Link Al</button>
+    </form>
 </body>
 </html>
