@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <title>Mini WeTransfer</title>
+    <meta charset="UTF-8">
+    <title>Dosya Gönder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4f46e5, #9333ea);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .card {
+            background: white;
+            color: #333;
+            padding: 40px;
+            border-radius: 16px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+        }
+
+        button {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #3730a3;
+        }
+
+        .link-box {
+            margin-top: 20px;
+            background: #f3f4f6;
+            padding: 10px;
+            border-radius: 8px;
+            word-break: break-all;
+        }
+
+        a {
+            color: #4f46e5;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Dosya Gönder 🚀</h1>
 
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <button type="submit">Yükle ve Link Al</button>
-    </form>
+    <div class="card">
+        <h1>Dosya Gönder 🚀</h1>
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Yükle ve Link Oluştur</button>
+        </form>
+    </div>
+
 </body>
 </html>
